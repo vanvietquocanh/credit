@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title><%= infoCompany.name %></title>
+	<link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="./stylesheets/libs.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="./stylesheets/style-loaned.css">
+	<link rel="stylesheet" href="./stylesheets/style.css">
+</head>
+<body>
+	<nav class="navbar navbar-expand-lg navbar-light bg-primary fixed-top">
+	  <a class="navbar-brand text-light" href="/">Home Page</a>
+	  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+	    <span class="navbar-toggler-icon"></span>
+	  </button>
+
+	  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+	    <ul class="navbar-nav mr-auto">
+	      <li class="nav-item active">
+	        <a class="nav-link text-light" href="#AboutUs">Chúng tôi<span class="sr-only">(current)</span></a>
+	      </li>
+	      <li class="nav-item active">
+	        <a class="nav-link text-light" href="#register-loan">Đăng ký vay<span class="sr-only">(current)</span></a>
+	      </li>
+	      <li class="nav-item">
+	        <a class="nav-link text-light" href="#condition">Điều kiện vay</i></a>
+	      </li>
+	      <li class="nav-item">
+	        <a class="nav-link text-light" href="#form-recommend">Đáo hạn thẻ</i></a>
+	      </li>
+	      <li class="nav-item">
+	        <a class="nav-link text-light" href="#form-recommend">Giới thiệu bạn bè</i></a>
+	      </li>
+	      <li class="nav-item dropdown">
+	        <a class="nav-link dropdown-toggle text-light" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+	          Dropdown
+	        </a>
+	        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+	          <a class="dropdown-item" href="#">Action</a>
+	          <a class="dropdown-item" href="#">Another action</a>
+	          <div class="dropdown-divider"></div>
+	          <a class="dropdown-item" href="#">Something else here</a>
+	        </div>
+	      </li>
+	    </ul>
+	    <ul class="navbar-nav">
+	    	<li class="navbar-brand pt-0 pb-0">
+	    		<a href="http://zalo.me/<%-infoCompany.zalo%>" target="_blank" class="text-light disabled-underline">
+	    			<img src="./images/zalo.png" class="zalo-icon" alt="icon zalo">&nbsp;
+	    		</a>
+	    	</li>
+	    	<li class="navbar-brand pt-0 pb-0">
+	    		<a href="<%-infoCompany.fanpage%>" class="text-light disabled-underline">
+	    			<i class="fab fa-facebook"></i>
+	    		</a>
+	    	</li>
+	    	<li class="navbar-brand pt-0 pb-0">
+	    		<a href="tel:<%-infoCompany.phone%>" class="text-light disabled-underline">
+	    			<%-infoCompany.phone%>&nbsp;<i class="fas fa-phone"></i>
+	    		</a>
+	    	</li>
+	    </ul>
+	  </div>
+	</nav>
+	<section class="bg-light p-0 margin-navtop" id="AboutUs">
+		<div class="grid-fluid no-pd">
+			<div data-equalheight="" class="about-row">
+				<div class="about-skew-bg"></div>
+				<div data-item="" class="about-right" style="min-height: 634px;">
+					<div class="content">
+						<h1 class="about-title second-title">TẠI SAO CHỌN<small class="sub-title"><%-infoCompany.name%>?</small>
+						</h1>
+						<div class="utilities-other">
+							<ul>
+								<li>
+										<span class="img">
+											<img src="./images/1.1.png" alt="Miêu tả cho hình ảnh tại đây" class="default">
+											<img src="./images/1.png" alt="Miêu tả cho hình ảnh tại đây" class="hover">
+										</span>
+										<span class="text"><p>Khoản vay đến <strong>100 </strong>triệu đồng(*)</p></span>
+									</li>
+								<li>
+										<span class="img">
+											<img src="./images/2.1.png" alt="Miêu tả cho hình ảnh tại đây" class="default">
+											<img src="./images/2.png" alt="Miêu tả cho hình ảnh tại đây" class="hover">
+										</span>
+										<span class="text"><p>Thời hạn vay <strong>12 - 48 </strong>tháng</p></span>
+									</li>
+								<li>
+										<span class="img">
+											<img src="./images/3.1.png" alt="Miêu tả cho hình ảnh tại đây" class="default">
+											<img src="./images/3.png" alt="Miêu tả cho hình ảnh tại đây" class="hover">
+										</span>
+										<span class="text"><p>Lãi suất từ <strong>18% đến 38% </strong>/năm tính trên dư nợ giảm dần</p></span>
+									</li>
+								<li>
+										<span class="img">
+											<img src="./images/4.1.png" alt="Miêu tả cho hình ảnh tại đây" class="default">
+											<img src="./images/4.png" alt="Miêu tả cho hình ảnh tại đây" class="hover">
+										</span>
+										<span class="text"><p>Giải ngân <strong>nhanh chóng</strong> sau khi hồ sơ được duyệt</p></span>
+									</li>
+								</ul>
+						</div>
+					</div>
+				</div>
+				<div data-item="" class="about-left" style="min-height: 634px;">
+					<div style="background-image:url(./images/cdt-bg-1.jpg)" class="about-bg"></div>
+					<div class="about-image">
+						<img src="./images/bdg-about-2.jpg" alt="Miêu tả cho hình ảnh tại đây" class="image">
+					</div>
+					<div class="content">
+						<div class="utilities">
+							<ul>
+								<li class="fas">Không thế chấp</li>
+								<li class="fas">Không bảo lãnh</li>
+								<li class="fas">Không phí thẩm định</li>
+								<li class="fas">Không phí tư vấn</li>
+								</ul>
+							<div>
+								<p><strong>Ví dụ: </strong>Với khoản vay 60 triệu đồng, thời hạn vay 12 tháng, lãi suất 18%/ năm, khoản thanh toán tháng là 5.500.800 đồng</p>
+								<p>(*) Cho mục đích tiêu dùng hoặc cho nhu cầu vốn phục vụ đời sống.</p>
+								<p>&nbsp;</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section id="register-loan" class="register ">
+
+		<a href="#register-loan" id="hover-down-icon" data-scroll-to="" class="scroll-btn">
+			<span class="fas fa-chevron-down fa-2x"></span>
+		</a>
+		<div style="background-image: url('./images/register-bg.jpg')" class="grid-fluid inner">
+			<h2 class="register-title">
+				<span class="round">ĐĂNG KÝ VAY<span class="round-bg"></span></span>
+			</h2>
+			<div data-custom-form-validation="" class="form-wrapper">
+				<form id="register-loan" method="post" action="/register-loan" autocomplete="off" class="form apply-form">
+					<div class="row">
+						<div class="col-md-6">
+							<fieldset>
+								<legend>1. Thông tin bắt buộc</legend>
+								<div class="row">
+									<div class="col-md-7 col-sm-12">
+										<div class="form-group">
+											<input type="text" class="form-control mb-2 mr-sm-2" id="fullName" placeholder="Họ và tên">
+										</div>
+									</div>
+									<div class="col-md-5 col-sm-12">
+										<div class="form-group">
+											<input type="number" class="form-control mb-2 mr-sm-2" id="phone" placeholder="Số điện thoại">
+										</div>
+									</div>
+								</div>
+								<div class="form-group">
+									<div data-cus-selected="" class="select-block">
+										<select name="purpose" class="form-control">
+											<option value="0">Tỉnh/Thành phố cư trú hiện tại</option>
+											<option value="TP HCM">TP HCM</option>
+											<option value="Hà Nội">Hà Nội</option>
+											<option value="An Giang">An Giang</option>
+											<option value="Bà Rịa - Vũng Tàu">Bà Rịa - Vũng Tàu</option>
+											<option value="Bắc Giang">Bắc Giang</option>
+											<option value="Bắc Kạn">Bắc Kạn</option>
+											<option value="Bạc Liêu">Bạc Liêu</option>
+											<option value="Bắc Ninh">Bắc Ninh</option>
+											<option value="Bến Tre">Bến Tre</option>
+											<option value="Bình Định">Bình Định</option>
+											<option value="Bình Dương">Bình Dương</option>
+											<option value="Bình Phước">Bình Phước</option>
+											<option value="Bình Thuận">Bình Thuận</option>
+											<option value="Cà Mau">Cà Mau</option>
+											<option value="Cao Bằng">Cao Bằng</option>
+											<option value="Cần Thơ">Cần Thơ</option>
+											<option value="Đà Nẵng">Đà Nẵng</option>
+											<option value="Đắk Lắk">Đắk Lắk</option>
+											<option value="Đắk Nông">Đắk Nông</option>
+											<option value="Điện Biên">Điện Biên</option>
+											<option value="Đồng Nai">Đồng Nai</option>
+											<option value="Đồng Tháp">Đồng Tháp</option>
+											<option value="Gia Lai">Gia Lai</option>
+											<option value="Hà Giang">Hà Giang</option>
+											<option value="Hà Nam">Hà Nam</option>
+											<option value="Hà Tĩnh">Hà Tĩnh</option>
+											<option value="Hải Phòng">Hải Phòng</option>
+											<option value="Hải Dương">Hải Dương</option>
+											<option value="Hậu Giang">Hậu Giang</option>
+											<option value="Hòa Bình">Hòa Bình</option>
+											<option value="Hưng Yên">Hưng Yên</option>
+											<option value="Khánh Hòa">Khánh Hòa</option>
+											<option value="Kiên Giang">Kiên Giang</option>
+											<option value="Kon Tum">Kon Tum</option>
+											<option value="Lai Châu">Lai Châu</option>
+											<option value="Lâm Đồng">Lâm Đồng</option>
+											<option value="Lạng Sơn">Lạng Sơn</option>
+											<option value="Lào Cai">Lào Cai</option>
+											<option value="Long An">Long An</option>
+											<option value="Nam Định">Nam Định</option>
+											<option value="Nghệ An">Nghệ An</option>
+											<option value="Ninh Bình">Ninh Bình</option>
+											<option value="Ninh Thuận">Ninh Thuận</option>
+											<option value="Phú Thọ">Phú Thọ</option>
+											<option value="Quảng Bình">Quảng Bình</option>
+											<option value="Quảng Nam">Quảng Nam</option>
+											<option value="Quảng Ngãi">Quảng Ngãi</option>
+											<option value="Quảng Ninh">Quảng Ninh</option>
+											<option value="Quảng Trị">Quảng Trị</option>
+											<option value="Sóc Trăng">Sóc Trăng</option>
+											<option value="Sơn La">Sơn La</option>
+											<option value="Tây Ninh">Tây Ninh</option>
+											<option value="Thái Bình">Thái Bình</option>
+											<option value="Thái Nguyên">Thái Nguyên</option>
+											<option value="Thanh Hóa">Thanh Hóa</option>
+											<option value="Thừa Thiên Huế">Thừa Thiên Huế</option>
+											<option value="Tiền Giang">Tiền Giang</option>
+											<option value="Trà Vinh">Trà Vinh</option>
+											<option value="Tuyên Quang">Tuyên Quang</option>
+											<option value="Vĩnh Long">Vĩnh Long</option>
+											<option value="Vĩnh Phúc">Vĩnh Phúc</option>
+											<option value="Yên Bái">Yên Bái</option>
+											<option value="Phú Yên">Phú Yên</option>
+										</select>
+									</div>
+								</div>
+								<div class="form-group">
+									<input type="text" name="income" id="income" required="required" data-error="{'required':true, 'numberOnly':true, 'min': 3500000}" data-message="{'required':'Thông tin bắt buộc', 'min':'Số tiền phải lớn hơn 3.500.000 đồng','numberOnly':'Vui lòng nhập số'}" placeholder="Thu nhập hàng tháng (Đồng)" class="form-control" maxlength="10" aria-required="true" data-format-number="">
+								</div>
+								<div class="form-group">
+									<div class="group-radio-inline">
+										<h3 class="group-title">Nguồn thu nhập</h3>
+										<div class="custom-radio">
+											<input type="radio" name="salaried" value="1" id="salaried" checked=""> <label for="salaried">Lương</label>
+										</div>
+										<div class="custom-radio">
+											<input type="radio" name="salaried" value="2" id="self-employed"> <label for="self-employed">Tự kinh doanh</label>
+										</div>
+									</div>
+								</div>
+							</fieldset>
+						</div>
+						<div class="col-md-6 colunm-right">
+							<fieldset>
+								<legend>2. Thông tin bổ sung</legend>
+								<div class="form-group">
+									<input type="tel" name="home-phone" id="home-phone" placeholder="Số điện thoại Nhà / Công ty" class="form-control" data-error="{'minlenght': 7}" data-message="{'minlenght': 'Vui lòng nhập ít nhất 7 số'}" maxlength="13">
+								</div>
+								<div class="row">
+									<div class="col-md-7 col-sm-12">
+										<div class="form-group">
+											<input type="email" name="email" id="email" data-error="{'email': true}" data-message="{'email': 'Vui lòng nhập email hợp lệ'}" placeholder="Email" class="form-control" maxlength="70">
+										</div>
+									</div>
+									<div class="col-md-5 col-sm-12">
+										<div class="form-group">
+											<input type="tel" name="passport" id="passport" placeholder="CMND" class="form-control" data-error="{'minlenght': 9}" data-message="{'minlenght': 'Vui lòng nhập ít nhất 9 số'}" maxlength="12">
+										</div>
+									</div>
+								</div>
+								<div class="form-group">
+									<input type="text" name="amount" id="amount" placeholder="Số tiền cần vay (Đồng)" class="form-control valid" maxlength="14" data-format-number="">
+								</div>
+							</fieldset>
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="promo-codes" class="label">Mã khuyến mãi</label>
+						<input type="text" name="promotion-code" id="promo-codes" class="form-control promo-codes">
+					</div>
+					<div class="form-group">
+						<p style="text-align: justify;">Bằng việc ấn vào nút <b>“Đăng ký ngay”</b> bên dưới , 
+						bạn cam kết cho phép Prudential Finance quản lý, 
+						lưu trữ và sử dụng toàn bộ hoặc một phần thông tin mà bạn đã cung cấp với thời gian không 
+						xác định nhằm mục đích thẩm định khoản vay, tiếp thị và nghiên cứu thị trường mà không cần thêm bất 
+						kỳ sự chấp thuận nào khác. Đồng thời, bạn cam kết đồng ý với 
+						<a target="_blank" href="https://www.prudentialfinance.com.vn/vi/tu-choi-trach-nhiem-va-chinh-sach-bao-mat.pru#policy">
+						Chính sách bảo mật</a> của Prudential Finance</p>
+					</div>
+					<div class="form-group text-center">
+						<button type="submit" class="btn btn-primary btn-submit">Đăng ký ngay<span class="icon icon-file"></span>
+						</button>
+					</div>
+				</form>
+			</div>
+		</div>
+	</section>
+	<section id="condition" class="condition ">
+		<div class="grid-fluid no-pd">
+			<h2 class="condition-title second-title">BẠN ĐÃ CÓ ĐỦ<small class="sub-title">ĐIỀU KIỆN VAY?</small>
+			</h2>
+			<div class="condition-list">
+				<div style="background-image: url('./images/cdt-bg-1.jpg')" class="citem citem-1">
+						<div class="citem-inner">
+							<div class="citem-image">
+									<span class="citem-image-bound">
+										<img src="./images/income.png" alt="<p>Thu nhập tối thiểu <strong>4,0</strong> triệu đồng/tháng</p>">
+									</span>
+								</div>
+							<div class="citem-text"><p>Thu nhập tối thiểu <strong>4,0</strong> triệu đồng/tháng</p></div>
+						</div>
+					</div>
+				<div style="background-image: url('./images/cdt-bg-1.jpg')" class="citem citem-1">
+						<div class="citem-inner">
+							<div class="citem-image">
+									<span class="citem-image-bound">
+										<img src="./images/marketing-people.png" alt="<ul>
+<li><strong>Đi làm hưởng lương:</strong> Từ 21 đến 55 tuổi (nữ) và 58 tuổi (nam)</li>
+<li><strong>Tự doanh:</strong> Từ 21 đến 65 tuổi</li>
+</ul>">
+									</span>
+								</div>
+							<div class="citem-text"><ul>
+<li><strong>Đi làm hưởng lương:</strong> Từ 21 đến 55 tuổi (nữ) và 58 tuổi (nam)</li>
+<li><strong>Tự doanh:</strong> Từ 21 đến 65 tuổi</li>
+</ul>
+							</div>
+						</div>
+					</div>
+				<div style="background-image: url('./images/cdt-bg-1.jpg')" class="citem citem-1">
+						<div class="citem-inner">
+							<div class="citem-image">
+									<span class="citem-image-bound">
+										<img src="./images/marker.png" alt="<p>Sống tại TP. HCM, Hà Nội &amp; 1 số huyện của: Vĩnh Phúc, Bắc Ninh, Hải Dương, Thái Nguyên, Nam Định, Thanh Hóa, Tam Kỳ, Huế, Đà Nẵng, Quảng Ngãi, Quy Nhơn, Nha Trang, Đồng Nai, Bình Dương, Vũng Tàu, Cần Thơ</p>">
+									</span>
+								</div>
+							<div class="citem-text"><p>Sống tại TP. HCM, Hà Nội &amp; 1 số huyện của: Vĩnh Phúc, Bắc Ninh, Hải Dương, Thái Nguyên, Nam Định, Thanh Hóa, Tam Kỳ, Huế, Đà Nẵng, Quảng Ngãi, Quy Nhơn, Nha Trang, Đồng Nai, Bình Dương, Vũng Tàu, Cần Thơ</p></div>
+						</div>
+					</div>
+				</div>
+		</div>
+	</section>
+	<section id="recommend" class="recommend ">
+		<div class="grid-fluid inner" style="background: url('./images/bg-5.jpg');">
+			<h2 class="primary-title recommend-title">GIỚI THIỆU BẠN</h2>
+			<div data-custom-form-validation="" class="form-wrapper">
+				<form id="form-recommend" name="referralForm" data-url-validation="/system/modules/com.prudential.finance.microsite/elements/refmember.act" method="post" enctype="application/x-www-form-urlencoded" novalidate="novalidate" class="form">
+
+					<input type="hidden" name="visitorID" value="190531024157004">
+					<input type="hidden" name="locale" value="vi">
+					<input type="hidden" name="token_key" value="350e7b29f1f084c20679db4a26c4366948f70859db"> 
+					<input type="hidden" name="EmailConfiguration" value="">
+					<input type="hidden" name="UnknowError" value="Đường truyền không ổn định, Vui lòng quay lại sau"> <input type="hidden" name="NotAllowGETMethod" value="Phương thức không được chấp nhận, Vui lòng kiểm tra lại">
+					<input type="hidden" name="TokenExpired" value="Trang đã quá hạn, Vui lòng refresh lại trang">
+					<input type="hidden" name="Success" value="Giới thiệu bạn thành công, Chúng tôi sẽ liên hệ trong thời gian sớm nhất. Xin cảm ơn">
+
+					<div class="row">
+						<div class="col-md-6">
+							<fieldset>
+								<legend>1. Thông tin Người Giới Thiệu</legend>
+								<div class="row">
+									<div class="col-md-7 col-sm-12">
+										<div class="form-group has-addon">
+											<input type="text" name="refFullName" id="refFullName" required="required" data-error="{'required':true, 'letterOnly':true}" data-message="{'required':'Họ và tên là bắt buộc', 'letterOnly':'Vui lòng nhập tên hợp lệ'}" placeholder="Họ và tên" class="form-control" maxlength="50" aria-required="true">
+											<sup class="addon error">*</sup>
+										</div>
+									</div>
+									<div class="col-md-5 col-sm-12">
+										<div class="form-group has-addon">
+											<input type="tel" name="refPhoneNumber" id="refPhoneNumber" required="required" data-error="{'required':true, 'minlenght': 7}" data-message="{'required':'Số điện thoại là bắt buộc', 'minlenght': 'Vui lòng nhập ít nhất 7 số'}" placeholder="Điện thoại" class="form-control" maxlength="13" aria-required="true">
+											<sup class="addon error">*</sup>
+										</div>
+									</div>
+								</div>
+								<div class="form-group has-addon">
+									<input type="email" name="refEmail" id="refEmail" data-error="{'email': true}" data-message="{'email': 'Vui lòng nhập email hợp lệ'}" placeholder="Email" class="form-control" maxlength="30">
+								</div>
+								<p class="note hidden-xs hidden-sm"><sup class="error">*</sup>Thông tin bắt buộc</p>
+							</fieldset>
+						</div>
+						<div class="col-md-6 colunm-right">
+							<fieldset>
+								<legend>2. Thông tin Người Được Giới Thiệu</legend>
+								<div class="row">
+									<div class="col-md-7 col-sm-12">
+										<div class="form-group has-addon">
+											<input type="text" name="friendName" id="friendName" required="required" data-error="{'required':true, 'letterOnly':true}" data-message="{'required':'Họ và tên là bắt buộc', 'letterOnly':'Vui lòng nhập tên hợp lệ'}" placeholder="Họ và tên" class="form-control" maxlength="50" aria-required="true">
+											<sup class="addon error">*</sup>
+										</div>
+									</div>
+									<div class="col-md-5 col-sm-12">
+										<div class="form-group has-addon">
+											<input type="tel" name="friendPhone" id="friendPhone" data-error="{'required':true, 'minlenght': 7}" data-message="{'required':'Số điện thoại là bắt buộc', 'minlenght': 'Vui lòng nhập ít nhất 7 số'}" placeholder="Điện thoại" class="form-control" maxlength="13">
+											<sup class="addon error">*</sup>
+										</div>
+									</div>
+								</div>
+								<div class="form-group has-addon">
+									<select name="refCity" class="form-control" id="refCity" data-error="{'required':true, 'valueNotEqual':'0'}" data-message="{'required':'Thông tin bắt buộc', 'valueNotEqual':'Vui lòng chọn Tỉnh/Thành phố cư trú hiện tại.'}">
+										<option value="0">Tỉnh/Thành phố cư trú hiện tại</option>
+										<option value="TP HCM">TP HCM</option>
+										<option value="Hà Nội">Hà Nội</option>
+										<option value="An Giang">An Giang</option>
+										<option value="Bà Rịa - Vũng Tàu">Bà Rịa - Vũng Tàu</option>
+										<option value="Bắc Giang">Bắc Giang</option>
+										<option value="Bắc Kạn">Bắc Kạn</option>
+										<option value="Bạc Liêu">Bạc Liêu</option>
+										<option value="Bắc Ninh">Bắc Ninh</option>
+										<option value="Bến Tre">Bến Tre</option>
+										<option value="Bình Định">Bình Định</option>
+										<option value="Bình Dương">Bình Dương</option>
+										<option value="Bình Phước">Bình Phước</option>
+										<option value="Bình Thuận">Bình Thuận</option>
+										<option value="Cà Mau">Cà Mau</option>
+										<option value="Cao Bằng">Cao Bằng</option>
+										<option value="Cần Thơ">Cần Thơ</option>
+										<option value="Đà Nẵng">Đà Nẵng</option>
+										<option value="Đắk Lắk">Đắk Lắk</option>
+										<option value="Đắk Nông">Đắk Nông</option>
+										<option value="Điện Biên">Điện Biên</option>
+										<option value="Đồng Nai">Đồng Nai</option>
+										<option value="Đồng Tháp">Đồng Tháp</option>
+										<option value="Gia Lai">Gia Lai</option>
+										<option value="Hà Giang">Hà Giang</option>
+										<option value="Hà Nam">Hà Nam</option>
+										<option value="Hà Tĩnh">Hà Tĩnh</option>
+										<option value="Hải Phòng">Hải Phòng</option>
+										<option value="Hải Dương">Hải Dương</option>
+										<option value="Hậu Giang">Hậu Giang</option>
+										<option value="Hòa Bình">Hòa Bình</option>
+										<option value="Hưng Yên">Hưng Yên</option>
+										<option value="Khánh Hòa">Khánh Hòa</option>
+										<option value="Kiên Giang">Kiên Giang</option>
+										<option value="Kon Tum">Kon Tum</option>
+										<option value="Lai Châu">Lai Châu</option>
+										<option value="Lâm Đồng">Lâm Đồng</option>
+										<option value="Lạng Sơn">Lạng Sơn</option>
+										<option value="Lào Cai">Lào Cai</option>
+										<option value="Long An">Long An</option>
+										<option value="Nam Định">Nam Định</option>
+										<option value="Nghệ An">Nghệ An</option>
+										<option value="Ninh Bình">Ninh Bình</option>
+										<option value="Ninh Thuận">Ninh Thuận</option>
+										<option value="Phú Thọ">Phú Thọ</option>
+										<option value="Quảng Bình">Quảng Bình</option>
+										<option value="Quảng Nam">Quảng Nam</option>
+										<option value="Quảng Ngãi">Quảng Ngãi</option>
+										<option value="Quảng Ninh">Quảng Ninh</option>
+										<option value="Quảng Trị">Quảng Trị</option>
+										<option value="Sóc Trăng">Sóc Trăng</option>
+										<option value="Sơn La">Sơn La</option>
+										<option value="Tây Ninh">Tây Ninh</option>
+										<option value="Thái Bình">Thái Bình</option>
+										<option value="Thái Nguyên">Thái Nguyên</option>
+										<option value="Thanh Hóa">Thanh Hóa</option>
+										<option value="Thừa Thiên Huế">Thừa Thiên Huế</option>
+										<option value="Tiền Giang">Tiền Giang</option>
+										<option value="Trà Vinh">Trà Vinh</option>
+										<option value="Tuyên Quang">Tuyên Quang</option>
+										<option value="Vĩnh Long">Vĩnh Long</option>
+										<option value="Vĩnh Phúc">Vĩnh Phúc</option>
+										<option value="Yên Bái">Yên Bái</option>
+										<option value="Phú Yên">Phú Yên</option>
+										</select>
+									<sup class="addon error">*</sup>
+								</div>
+								<div class="form-group has-addon">
+									<input type="email" name="friendEmail" id="friendEmail" data-error="{'email': true}" data-message="{'email': 'Vui lòng nhập email hợp lệ'}" placeholder="Email" class="form-control" maxlength="30">
+								</div>
+								<div class="form-group">
+									<input type="text" name="friendTime" id="friendTime" placeholder="Thời gian liên lạc tốt nhất" class="form-control" maxlength="50">
+								</div>
+								<p class="note hidden-md hidden-lg"><sup class="error">*</sup>Thông tin bắt buộc</p>
+							</fieldset>
+						</div>
+					</div>
+					<p class="policy">
+						<label for="term">Người Giới Thiệu cam kết tự chịu trách nhiệm về việc cung cấp thông tin của Người Được Giới Thiệu cho Công ty và đồng thời cam kết giữ cho Công ty không bị liên đới trong bất kỳ khiếu nại nào từ những người liên quan đến việc cung cấp thông tin này.</label>
+							<input type="checkbox" name="term" data-error="{'required': true}" data-message="{'required': 'Thông tin này là bắt buộc'}" id="term" class="checkbox">
+					</p>
+					<div class="form-group text-center">
+						<button id="referral" type="submit" name="referral" class="btn btn-primary btn-submit">Giới thiệu ngay<span class="icon icon-click"></span>
+						</button>
+					</div>
+				</form>
+			</div>
+		</div>
+	</section>
+	<footer class="page-footer font-small blue pt-4 bg-primary">
+
+	  <!-- Footer Links -->
+	  <div class="container-fluid text-center text-md-left">
+
+	    <!-- Grid row -->
+	    <div class="row">
+
+	      <!-- Grid column -->
+	      <div class="col-md-6 mt-md-0 mt-3">
+
+	        <!-- Content -->
+	        <h5 class="text-uppercase text-light">Footer Content</h5>
+	        <p class="text-light">Here you can use rows and columns to organize your footer content.</p>
+
+	      </div>
+	      <!-- Grid column -->
+
+	      <hr class="clearfix w-100 d-md-none pb-3">
+
+	      <!-- Grid column -->
+	      <div class="col-md-3 mb-md-0 mb-3">
+
+	        <!-- Links -->
+	        <h5 class="text-uppercase text-light">Links</h5>
+
+	        <ul class="list-unstyled">
+	          <li>
+	            <a href="#!" class="text-light">Link 1</a>
+	          </li>
+	          <li>
+	            <a href="#!" class="text-light">Link 2</a>
+	          </li>
+	          <li>
+	            <a href="#!" class="text-light">Link 3</a>
+	          </li>
+	          <li>
+	            <a href="#!" class="text-light">Link 4</a>
+	          </li>
+	        </ul>
+
+	      </div>
+	      <!-- Grid column -->
+
+	      <!-- Grid column -->
+	      <div class="col-md-3 mb-md-0 mb-3">
+
+	        <!-- Links -->
+	        <h5 class="text-uppercase text-light">Links</h5>
+
+	        <ul class="list-unstyled">
+	          <li>
+	            <a href="#!" class="text-light">Link 1</a>
+	          </li>
+	          <li>
+	            <a href="#!" class="text-light">Link 2</a>
+	          </li>
+	          <li>
+	            <a href="#!" class="text-light">Link 3</a>
+	          </li>
+	          <li>
+	            <a href="#!" class="text-light">Link 4</a>
+	          </li>
+	        </ul>
+
+	      </div>
+	      <!-- Grid column -->
+
+	    </div>
+	    <!-- Grid row -->
+
+	  </div>
+	  <!-- Footer Links -->
+
+	  <!-- Copyright -->
+	  	<div class="footer-copyright text-center py-3 text-light">© <%-new Date().getFullYear()%> <%-infoCompany.name%>
+	  		<span class="separator">-</span> Powered by : 
+	  		<a href="https://www.facebook.com/vanvietquocanh" class="text-light" target="_blank">Van Viet Quoc Anh</a>
+	   	</div>
+	  <!-- Copyright -->
+
+	</footer>
+	<!-- Footer -->
+</body>
+</html>
