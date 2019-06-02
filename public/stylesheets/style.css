@@ -1,0 +1,81 @@
+* {
+  font-family: "roboto", arial, sans-serif;
+  box-sizing: border-box; }
+
+body a.text-light, body a.text-light {
+  transition: .3s;
+  color: #e7ecf1 !important; }
+
+body a.text-light:focus, body a.text-light:hover {
+  color: #fff !important; }
+
+body input[type=number]::-webkit-inner-spin-button,
+body input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0; }
+
+body .grid-fluid {
+  width: 100%; }
+
+body .bg-light {
+  background: #fff !important; }
+
+body .utilities ul li::before {
+  content: "\f00c";
+  color: #007bff;
+  padding-right: 1em; }
+
+body #hover-down-icon > span {
+  transition: .25s; }
+
+body #hover-down-icon:hover > span {
+  margin-top: .7em; }
+
+body .utilities-other ul li {
+  transition: .3s; }
+
+body .utilities-other ul li:hover .img img {
+  opacity: 0; }
+
+body .utilities-other ul li:hover .img .hover {
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+  opacity: 1; }
+
+body form .text-center .btn-submit {
+  transition: .5s; }
+
+body form .text-center .btn-submit:hover::before {
+  width: 100%; }
+
+body form .text-center .btn-submit::before {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  left: 0;
+  top: 0;
+  width: 0;
+  height: 100%;
+  background-color: #0069d9;
+  transition: width .5s; }
+
+body .margin-navtop {
+  margin-top: 3.85em; }
+
+body .disabled-underline {
+  text-decoration: none; }
+
+body .zalo-icon {
+  width: 1.29em;
+  border: 1px solid #fff;
+  border-radius: .25em; }
+
+body .fa-phone {
+  padding-top: 7px; }
+
+body .fa-facebook {
+  font-size: 27px;
+  padding-top: 2px; }
+
+/*# sourceMappingURL=style.css.map */
