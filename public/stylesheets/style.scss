@@ -3,6 +3,40 @@
 	box-sizing: border-box;
 }
 body{
+	.timepicker-picker {
+		// border: 1px solid red;
+		// width: 100%;
+		height: 240px; 
+		margin: 0 80px; 
+		display: inline-flex; 
+		flex-direction: column;
+		justify-content: center; 
+	}
+	.calendar {
+		cursor: pointer;
+	}
+	.timepicker-picker table td {
+	    height: 24px;
+	    line-height: 24px;
+	    width: 24px;
+	}
+	.bootstrap-datetimepicker-widget table td.separator { 
+		width: 1px;
+		height: 1px;
+		line-height: 1px;
+	} 
+	.bootstrap-datetimepicker-widget .timepicker-hour,
+	.bootstrap-datetimepicker-widget .timepicker-minute,
+	.bootstrap-datetimepicker-widget .glyphicon-chevron-up,
+	.bootstrap-datetimepicker-widget .glyphicon-chevron-down {
+		width: 20px;
+		height: 15px; 
+		line-height: 1;
+	}
+	.bootstrap-datetimepicker-widget table td span:hover {
+	    background: none;
+	}
+	/* --o-- */
 	a.text-light, a.text-light{
 		transition: .3s;
 		color: #e7ecf1!important;
@@ -86,5 +120,19 @@ body{
 	.fa-facebook{
 		font-size: 27px;
 		padding-top: 2px;
+	}
+	.gotop{
+		border: 1px solid #fff;
+		padding: 1em;
+		z-index: 100000;
+		position: fixed;
+		right: 2em;
+		bottom: 7em;
+		&::before{
+			color: #fff;
+			content: "\f077"
+		}
+	}
+	#backgroundCC{
 	}
 }

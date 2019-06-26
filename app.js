@@ -7,6 +7,10 @@ var sassMiddleware = require('node-sass-middleware');
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
+var ccMaturityRouter = require('./routes/get.ccMaturity');
+var introduceFriendRouter = require('./routes/post.introduceFriend');
+var receiveEmailRouter = require('./routes/post.receiveEmail');
+var registerLoanAdviceRouter = require('./routes/post.registerLoanAdvice');
 
 var app = express();
 
@@ -28,6 +32,10 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
+app.use('/CCMaturity', ccMaturityRouter);
+app.use('/introduce-friend', introduceFriendRouter);
+app.use('/mailinfo', receiveEmailRouter);
+app.use('/register-loan', registerLoanAdviceRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

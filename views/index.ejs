@@ -10,14 +10,20 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.2.0/js/bootstrap.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/boootstrapotstrap.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/locale/af.js" integrity="sha256-I5ZXO8KcMnqNkrXU7baGig70nATYjNDnxxA2d40PcR8=" crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.37/css/bootstrap-datetimepicker.css" crossorigin="anonymous">
 	<link rel="stylesheet" href="./stylesheets/style-loaned.css">
 	<link rel="stylesheet" href="./stylesheets/style.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.14.30/js/bootstrap-datetimepicker.min.js" defer></script>	
 </head>
 <body>
+	<%-infoCompany.chatbox%>
+	<%-infoCompany.sdkFb%>
 	<nav class="navbar navbar-expand-lg navbar-light bg-primary fixed-top">
-	  <a class="navbar-brand text-light" href="/">Home Page</a>
+	  <a class="navbar-brand text-light" href="/"><%= infoCompany.name %></a>
 	  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 	    <span class="navbar-toggler-icon"></span>
 	  </button>
@@ -27,27 +33,33 @@
 	      <li class="nav-item active">
 	        <a class="nav-link text-light" href="#AboutUs">Chúng tôi<span class="sr-only">(current)</span></a>
 	      </li>
+	      <li class="nav-item">
+	        <a class="nav-link text-light" href="/CCMaturity">Đáo hạn thẻ tín dụng</i></a>
+	      </li>
 	      <li class="nav-item active">
-	        <a class="nav-link text-light" href="#register-loan">Đăng ký vay<span class="sr-only">(current)</span></a>
+	        <a class="nav-link text-light" href="#register-loan">Nhận tư vấn vay<span class="sr-only">(current)</span></a>
 	      </li>
 	      <li class="nav-item">
 	        <a class="nav-link text-light" href="#condition">Điều kiện vay</i></a>
-	      </li>
-	      <li class="nav-item">
-	        <a class="nav-link text-light" href="#form-recommend">Đáo hạn thẻ</i></a>
 	      </li>
 	      <li class="nav-item">
 	        <a class="nav-link text-light" href="#form-recommend">Giới thiệu bạn bè</i></a>
 	      </li>
 	      <li class="nav-item dropdown">
 	        <a class="nav-link dropdown-toggle text-light" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-	          Dropdown
+	          Vay theo
 	        </a>
 	        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-	          <a class="dropdown-item" href="#">Action</a>
-	          <a class="dropdown-item" href="#">Another action</a>
+	          <a class="dropdown-item" href="/vay+theo+bảo+hiểm+nhân+thọ">Bảo hiểm nhân thọ</a>
+	          <a class="dropdown-item" href="/vay+theo+hộ+khẩu+CMND">Hộ khẩu & CMND</a>
+	          <a class="dropdown-item" href="/vay+theo+hóa+đơn+điện+nước">Hóa đơn điện nước</a>
+	          <a class="dropdown-item" href="/vay+theo+thẻ+tín+dụng">Thẻ tín dụng</a>
+	          <a class="dropdown-item" href="/vay+theo+cavet+xe">Cavet xe</a>
+	          <a class="dropdown-item" href="/vay+theo+giấy+phép+kinh+doanh">Giấy phép kinh doanh</a>
+	          <a class="dropdown-item" href="/vay+theo+hợp+đồng+tín+chấp+củ">Hợp đồng tín chấp củ</a>
 	          <div class="dropdown-divider"></div>
-	          <a class="dropdown-item" href="#">Something else here</a>
+	          <a class="dropdown-item" href="/tín+chấp+qua+lương">Tín chấp qua lương</a>
+	          <a class="dropdown-item" href="/ưu+đãi+dành+cho+giáo+viên+bác+sĩ">Ưu đãi dành cho Giáo viên/Bác sĩ</a>
 	        </div>
 	      </li>
 	    </ul>
@@ -85,21 +97,21 @@
 											<img src="./images/1.1.png" alt="Miêu tả cho hình ảnh tại đây" class="default">
 											<img src="./images/1.png" alt="Miêu tả cho hình ảnh tại đây" class="hover">
 										</span>
-										<span class="text"><p>Khoản vay đến <strong>100 </strong>triệu đồng(*)</p></span>
+										<span class="text"><p>Khoản vay đến <strong>70 </strong>triệu đồng(*)</p></span>
 									</li>
 								<li>
 										<span class="img">
 											<img src="./images/2.1.png" alt="Miêu tả cho hình ảnh tại đây" class="default">
 											<img src="./images/2.png" alt="Miêu tả cho hình ảnh tại đây" class="hover">
 										</span>
-										<span class="text"><p>Thời hạn vay <strong>12 - 48 </strong>tháng</p></span>
+										<span class="text"><p>Thời hạn vay <strong>06 - 36 </strong>tháng</p></span>
 									</li>
 								<li>
 										<span class="img">
 											<img src="./images/3.1.png" alt="Miêu tả cho hình ảnh tại đây" class="default">
 											<img src="./images/3.png" alt="Miêu tả cho hình ảnh tại đây" class="hover">
 										</span>
-										<span class="text"><p>Lãi suất từ <strong>18% đến 38% </strong>/năm tính trên dư nợ giảm dần</p></span>
+										<span class="text"><p>Lãi suất từ <strong>18% đến 30% </strong>/năm tính trên dư nợ gốc </p></span>
 									</li>
 								<li>
 										<span class="img">
@@ -122,11 +134,11 @@
 							<ul>
 								<li class="fas">Không thế chấp</li>
 								<li class="fas">Không bảo lãnh</li>
-								<li class="fas">Không phí thẩm định</li>
+								<li class="fas">Không thẩm định</li>
 								<li class="fas">Không phí tư vấn</li>
 								</ul>
 							<div>
-								<p><strong>Ví dụ: </strong>Với khoản vay 60 triệu đồng, thời hạn vay 12 tháng, lãi suất 18%/ năm, khoản thanh toán tháng là 5.500.800 đồng</p>
+								<p><strong>Ví dụ: </strong>Với khoản vay 50 triệu đồng, thời hạn vay 36 tháng, khoản thanh toán tháng là 2.500.000 đồng</p>
 								<p>(*) Cho mục đích tiêu dùng hoặc cho nhu cầu vốn phục vụ đời sống.</p>
 								<p>&nbsp;</p>
 							</div>
@@ -143,7 +155,7 @@
 		</a>
 		<div style="background-image: url('./images/register-bg.jpg')" class="grid-fluid inner">
 			<h2 class="register-title">
-				<span class="round">ĐĂNG KÝ VAY<span class="round-bg"></span></span>
+				<span class="round">Nhận tư vấn vay<span class="round-bg"></span></span>
 			</h2>
 			<div data-custom-form-validation="" class="form-wrapper">
 				<form id="register-loan" method="post" action="/register-loan" autocomplete="off" class="form apply-form">
@@ -154,19 +166,19 @@
 								<div class="row">
 									<div class="col-md-7 col-sm-12">
 										<div class="form-group">
-											<input type="text" class="form-control mb-2 mr-sm-2" id="fullName" placeholder="Họ và tên">
+											<input type="text" pattern="[a-zA-Z]{10,50}" class="fullName form-control mb-2 mr-sm-2" name="fullName" id="fullName" required="required" placeholder="Họ và tên">
 										</div>
 									</div>
 									<div class="col-md-5 col-sm-12">
 										<div class="form-group">
-											<input type="number" class="form-control mb-2 mr-sm-2" id="phone" placeholder="Số điện thoại">
+											<input type="text" pattern="^[\+]+84+([0-9]{9})\b|09+([0-9]{8})\b" class="phoneNumber form-control mb-2 mr-sm-2" name="phoneNumber" required="required" id="phone" placeholder="Số điện thoại">
 										</div>
 									</div>
 								</div>
 								<div class="form-group">
 									<div data-cus-selected="" class="select-block">
-										<select name="purpose" class="form-control">
-											<option value="0">Tỉnh/Thành phố cư trú hiện tại</option>
+										<select name="purpose" required="required" class="form-control" name="city">
+											<option value="">Tỉnh/Thành phố cư trú hiện tại</option>
 											<option value="TP HCM">TP HCM</option>
 											<option value="Hà Nội">Hà Nội</option>
 											<option value="An Giang">An Giang</option>
@@ -183,7 +195,7 @@
 											<option value="Cà Mau">Cà Mau</option>
 											<option value="Cao Bằng">Cao Bằng</option>
 											<option value="Cần Thơ">Cần Thơ</option>
-											<option value="Đà Nẵng">Đà Nẵng</option>
+											<option value="Đà Nẵng" selected>Đà Nẵng</option>
 											<option value="Đắk Lắk">Đắk Lắk</option>
 											<option value="Đắk Nông">Đắk Nông</option>
 											<option value="Điện Biên">Điện Biên</option>
@@ -234,7 +246,7 @@
 									</div>
 								</div>
 								<div class="form-group">
-									<input type="text" name="income" id="income" required="required" data-error="{'required':true, 'numberOnly':true, 'min': 3500000}" data-message="{'required':'Thông tin bắt buộc', 'min':'Số tiền phải lớn hơn 3.500.000 đồng','numberOnly':'Vui lòng nhập số'}" placeholder="Thu nhập hàng tháng (Đồng)" class="form-control" maxlength="10" aria-required="true" data-format-number="">
+									<input type="number" name="income" id="income" required="required" pattern="[0-9]" min="3500000" placeholder="Thu nhập hàng tháng (Đồng)" class="form-control">
 								</div>
 								<div class="form-group">
 									<div class="group-radio-inline">
@@ -249,45 +261,32 @@
 								</div>
 							</fieldset>
 						</div>
-						<div class="col-md-6 colunm-right">
+						<div class="col-md-6 colunm-right mt-0">
 							<fieldset>
 								<legend>2. Thông tin bổ sung</legend>
 								<div class="form-group">
-									<input type="tel" name="home-phone" id="home-phone" placeholder="Số điện thoại Nhà / Công ty" class="form-control" data-error="{'minlenght': 7}" data-message="{'minlenght': 'Vui lòng nhập ít nhất 7 số'}" maxlength="13">
+									<input type="text" name="home-phone" id="home-phone" pattern="^\s*$^[\+]+842+([0-9]{9})|02+([0-9]{9})" placeholder="Số điện thoại Nhà / Công ty" class="form-control home-phone" maxlength="13">
 								</div>
 								<div class="row">
 									<div class="col-md-7 col-sm-12">
 										<div class="form-group">
-											<input type="email" name="email" id="email" data-error="{'email': true}" data-message="{'email': 'Vui lòng nhập email hợp lệ'}" placeholder="Email" class="form-control" maxlength="70">
+											<input type="email" name="email" id="email" required="required" placeholder="Email" class="form-control" maxlength="70">
 										</div>
 									</div>
 									<div class="col-md-5 col-sm-12">
 										<div class="form-group">
-											<input type="tel" name="passport" id="passport" placeholder="CMND" class="form-control" data-error="{'minlenght': 9}" data-message="{'minlenght': 'Vui lòng nhập ít nhất 9 số'}" maxlength="12">
+											<input type="text" pattern="([0-9]{12})|([0-9]{9})" required="required" name="passport" id="passport" placeholder="CMND" class="passport form-control" maxlength="12">
 										</div>
 									</div>
 								</div>
 								<div class="form-group">
-									<input type="text" name="amount" id="amount" placeholder="Số tiền cần vay (Đồng)" class="form-control valid" maxlength="14" data-format-number="">
+									<input type="number" name="amount" id="amount" required="required" placeholder="Số tiền cần vay (Đồng)" class="form-control valid" min="1000000" pattern="[0-9]">
 								</div>
 							</fieldset>
 						</div>
 					</div>
-					<div class="form-group">
-						<label for="promo-codes" class="label">Mã khuyến mãi</label>
-						<input type="text" name="promotion-code" id="promo-codes" class="form-control promo-codes">
-					</div>
-					<div class="form-group">
-						<p style="text-align: justify;">Bằng việc ấn vào nút <b>“Đăng ký ngay”</b> bên dưới , 
-						bạn cam kết cho phép Prudential Finance quản lý, 
-						lưu trữ và sử dụng toàn bộ hoặc một phần thông tin mà bạn đã cung cấp với thời gian không 
-						xác định nhằm mục đích thẩm định khoản vay, tiếp thị và nghiên cứu thị trường mà không cần thêm bất 
-						kỳ sự chấp thuận nào khác. Đồng thời, bạn cam kết đồng ý với 
-						<a target="_blank" href="https://www.prudentialfinance.com.vn/vi/tu-choi-trach-nhiem-va-chinh-sach-bao-mat.pru#policy">
-						Chính sách bảo mật</a> của Prudential Finance</p>
-					</div>
 					<div class="form-group text-center">
-						<button type="submit" class="btn btn-primary btn-submit">Đăng ký ngay<span class="icon icon-file"></span>
+						<button type="submit" class="btn btn-primary btn-submit">Nhận tư vấn<span class="icon icon-file"></span>
 						</button>
 					</div>
 				</form>
@@ -343,60 +342,32 @@
 		<div class="grid-fluid inner" style="background: url('./images/bg-5.jpg');">
 			<h2 class="primary-title recommend-title">GIỚI THIỆU BẠN</h2>
 			<div data-custom-form-validation="" class="form-wrapper">
-				<form id="form-recommend" name="referralForm" data-url-validation="/system/modules/com.prudential.finance.microsite/elements/refmember.act" method="post" enctype="application/x-www-form-urlencoded" novalidate="novalidate" class="form">
-
-					<input type="hidden" name="visitorID" value="190531024157004">
-					<input type="hidden" name="locale" value="vi">
-					<input type="hidden" name="token_key" value="350e7b29f1f084c20679db4a26c4366948f70859db"> 
-					<input type="hidden" name="EmailConfiguration" value="">
-					<input type="hidden" name="UnknowError" value="Đường truyền không ổn định, Vui lòng quay lại sau"> <input type="hidden" name="NotAllowGETMethod" value="Phương thức không được chấp nhận, Vui lòng kiểm tra lại">
-					<input type="hidden" name="TokenExpired" value="Trang đã quá hạn, Vui lòng refresh lại trang">
-					<input type="hidden" name="Success" value="Giới thiệu bạn thành công, Chúng tôi sẽ liên hệ trong thời gian sớm nhất. Xin cảm ơn">
-
+				<form id="form-recommend" action="/introduce-friend" method="post" enctype="application/json" class="form">
 					<div class="row">
 						<div class="col-md-6">
 							<fieldset>
-								<legend>1. Thông tin Người Giới Thiệu</legend>
 								<div class="row">
 									<div class="col-md-7 col-sm-12">
 										<div class="form-group has-addon">
-											<input type="text" name="refFullName" id="refFullName" required="required" data-error="{'required':true, 'letterOnly':true}" data-message="{'required':'Họ và tên là bắt buộc', 'letterOnly':'Vui lòng nhập tên hợp lệ'}" placeholder="Họ và tên" class="form-control" maxlength="50" aria-required="true">
-											<sup class="addon error">*</sup>
+											<input type="text" name="friendName" id="friendName" required="required" placeholder="Họ và tên" class="fullName form-control" pattern="[a-zA-Z]{10,50}" aria-required="true">
 										</div>
 									</div>
 									<div class="col-md-5 col-sm-12">
 										<div class="form-group has-addon">
-											<input type="tel" name="refPhoneNumber" id="refPhoneNumber" required="required" data-error="{'required':true, 'minlenght': 7}" data-message="{'required':'Số điện thoại là bắt buộc', 'minlenght': 'Vui lòng nhập ít nhất 7 số'}" placeholder="Điện thoại" class="form-control" maxlength="13" aria-required="true">
-											<sup class="addon error">*</sup>
+											<input type="text" name="friendPhone" id="friendPhone" pattern="^[\+]+84+([0-9]{9})\b|09+([0-9]{8})\b" required="required" placeholder="Điện thoại" class="phoneNumber form-control">
 										</div>
 									</div>
 								</div>
 								<div class="form-group has-addon">
-									<input type="email" name="refEmail" id="refEmail" data-error="{'email': true}" data-message="{'email': 'Vui lòng nhập email hợp lệ'}" placeholder="Email" class="form-control" maxlength="30">
+									<input type="email" name="friendEmail" required="required" id="friendEmail" placeholder="Email" class="email form-control">
 								</div>
-								<p class="note hidden-xs hidden-sm"><sup class="error">*</sup>Thông tin bắt buộc</p>
 							</fieldset>
 						</div>
-						<div class="col-md-6 colunm-right">
+						<div class="col-md-6 colunm-right mt-0">
 							<fieldset>
-								<legend>2. Thông tin Người Được Giới Thiệu</legend>
-								<div class="row">
-									<div class="col-md-7 col-sm-12">
-										<div class="form-group has-addon">
-											<input type="text" name="friendName" id="friendName" required="required" data-error="{'required':true, 'letterOnly':true}" data-message="{'required':'Họ và tên là bắt buộc', 'letterOnly':'Vui lòng nhập tên hợp lệ'}" placeholder="Họ và tên" class="form-control" maxlength="50" aria-required="true">
-											<sup class="addon error">*</sup>
-										</div>
-									</div>
-									<div class="col-md-5 col-sm-12">
-										<div class="form-group has-addon">
-											<input type="tel" name="friendPhone" id="friendPhone" data-error="{'required':true, 'minlenght': 7}" data-message="{'required':'Số điện thoại là bắt buộc', 'minlenght': 'Vui lòng nhập ít nhất 7 số'}" placeholder="Điện thoại" class="form-control" maxlength="13">
-											<sup class="addon error">*</sup>
-										</div>
-									</div>
-								</div>
 								<div class="form-group has-addon">
-									<select name="refCity" class="form-control" id="refCity" data-error="{'required':true, 'valueNotEqual':'0'}" data-message="{'required':'Thông tin bắt buộc', 'valueNotEqual':'Vui lòng chọn Tỉnh/Thành phố cư trú hiện tại.'}">
-										<option value="0">Tỉnh/Thành phố cư trú hiện tại</option>
+									<select name="refCity" class="form-control" id="refCity" required="required">
+										<option value="">Tỉnh/Thành phố cư trú hiện tại</option>
 										<option value="TP HCM">TP HCM</option>
 										<option value="Hà Nội">Hà Nội</option>
 										<option value="An Giang">An Giang</option>
@@ -413,7 +384,7 @@
 										<option value="Cà Mau">Cà Mau</option>
 										<option value="Cao Bằng">Cao Bằng</option>
 										<option value="Cần Thơ">Cần Thơ</option>
-										<option value="Đà Nẵng">Đà Nẵng</option>
+										<option value="Đà Nẵng" selected>Đà Nẵng</option>
 										<option value="Đắk Lắk">Đắk Lắk</option>
 										<option value="Đắk Nông">Đắk Nông</option>
 										<option value="Điện Biên">Điện Biên</option>
@@ -463,20 +434,19 @@
 										</select>
 									<sup class="addon error">*</sup>
 								</div>
-								<div class="form-group has-addon">
-									<input type="email" name="friendEmail" id="friendEmail" data-error="{'email': true}" data-message="{'email': 'Vui lòng nhập email hợp lệ'}" placeholder="Email" class="form-control" maxlength="30">
-								</div>
 								<div class="form-group">
 									<input type="text" name="friendTime" id="friendTime" placeholder="Thời gian liên lạc tốt nhất" class="form-control" maxlength="50">
+									<div class="input-group input-group-sm" id='datetimepicker'>
+										<input type="text" class="form-control input-sm" />   
+										<span class="input-group-addon calendar">
+											<span class="glyphicon glyphicon-calendar"></span>
+										</span>
+									</div> <!-- end input group-->
 								</div>
 								<p class="note hidden-md hidden-lg"><sup class="error">*</sup>Thông tin bắt buộc</p>
 							</fieldset>
 						</div>
 					</div>
-					<p class="policy">
-						<label for="term">Người Giới Thiệu cam kết tự chịu trách nhiệm về việc cung cấp thông tin của Người Được Giới Thiệu cho Công ty và đồng thời cam kết giữ cho Công ty không bị liên đới trong bất kỳ khiếu nại nào từ những người liên quan đến việc cung cấp thông tin này.</label>
-							<input type="checkbox" name="term" data-error="{'required': true}" data-message="{'required': 'Thông tin này là bắt buộc'}" id="term" class="checkbox">
-					</p>
 					<div class="form-group text-center">
 						<button id="referral" type="submit" name="referral" class="btn btn-primary btn-submit">Giới thiệu ngay<span class="icon icon-click"></span>
 						</button>
@@ -497,32 +467,50 @@
 	      <div class="col-md-6 mt-md-0 mt-3">
 
 	        <!-- Content -->
-	        <h5 class="text-uppercase text-light">Footer Content</h5>
-	        <p class="text-light">Here you can use rows and columns to organize your footer content.</p>
-
+	        <h1 class="text-uppercase text-light"><%= infoCompany.name %></h1>
+	        <h4 class="text-light">Rãi hoa lên con đường đến ước mơ của bạn là hạnh phúc của chúng tôi!</h4>
+			<ul class="list-unstyled">
+	          <li>
+					<p class="text-light"><i class='fas fa-clock ml-4 pr-3'></i>Thời gian làm việc 24/7</p>
+	          </li>
+	          <li>
+					<p class="text-light"><i class='fas fa-map-marker-alt ml-4 pr-3'></i><%-infoCompany.address%></p>
+	          </li>
+	          <li>
+					<a class="text-light" href="tel:0931555377"><i class='fas fa-mobile-alt ml-4 pr-3'></i>0931555377</a>
+	          </li>
+	        </ul>
 	      </div>
 	      <!-- Grid column -->
 
 	      <hr class="clearfix w-100 d-md-none pb-3">
 
 	      <!-- Grid column -->
-	      <div class="col-md-3 mb-md-0 mb-3">
-
+	      <div class="col-md-2 mb-md-0 mb-2">
 	        <!-- Links -->
-	        <h5 class="text-uppercase text-light">Links</h5>
+	        <h5 class="text-uppercase text-light">Vay theo</h5>
 
 	        <ul class="list-unstyled">
 	          <li>
-	            <a href="#!" class="text-light">Link 1</a>
+	            <a class="text-light" href="/vay+theo+bảo+hiểm+nhân+thọ">Bảo hiểm nhân thọ</a>
 	          </li>
 	          <li>
-	            <a href="#!" class="text-light">Link 2</a>
+	            <a class="text-light" href="/vay+theo+hộ+khẩu+CMND">Hộ khẩu & CMND</a>
 	          </li>
 	          <li>
-	            <a href="#!" class="text-light">Link 3</a>
+	            <a class="text-light" href="/vay+theo+hóa+đơn+điện+nước">Hóa đơn điện nước</a>
 	          </li>
 	          <li>
-	            <a href="#!" class="text-light">Link 4</a>
+	            <a class="text-light" href="/vay+theo+thẻ+tín+dụng">Thẻ tín dụng</a>
+	          </li>
+	          <li>
+	            <a class="text-light" href="/vay+theo+cavet+xe">Cavet xe</a>
+	          </li>
+	          <li>
+	            <a class="text-light" href="/vay+theo+giấy+phép+kinh+doanh">Giấy phép kinh doanh</a>
+	          </li>
+	          <li>
+	            <a class="text-light" href="/vay+theo+hợp+đồng+tín+chấp+củ">Hợp đồng tín chấp củ</a>
 	          </li>
 	        </ul>
 
@@ -530,23 +518,25 @@
 	      <!-- Grid column -->
 
 	      <!-- Grid column -->
-	      <div class="col-md-3 mb-md-0 mb-3">
+	      <div class="col-md-4 mb-md-0 mb-4">
 
 	        <!-- Links -->
-	        <h5 class="text-uppercase text-light">Links</h5>
+	        <h5 class="text-uppercase text-light">Loại vay khác</h5>
 
 	        <ul class="list-unstyled">
-	          <li>
-	            <a href="#!" class="text-light">Link 1</a>
+	          <li class="pt-3">
+	            <a class="text-light" href="/tín+chấp+qua+lương">Tín chấp qua lương</a>
+	          </li>
+	          <li class="pt-3">
+	            <a class="text-light" href="/ưu+đãi+dành+cho+giáo+viên+bác+sĩ">Ưu đãi dành cho Giáo viên/Bác sĩ</a>
 	          </li>
 	          <li>
-	            <a href="#!" class="text-light">Link 2</a>
-	          </li>
-	          <li>
-	            <a href="#!" class="text-light">Link 3</a>
-	          </li>
-	          <li>
-	            <a href="#!" class="text-light">Link 4</a>
+	          	<form action="/mailinfo" method="post" class="pt-4">
+	          		<div class="form-group has-addon d-flex">
+	          			<input type="email" class="pl-2" name="email" id="emailClient" placeholder="Nhập email để nhận thông báo mới từ chúng tôi!" style="height:40px; width: 60%">
+						<button class="btn border-light text-light">Gửi</button>
+	          		</div>
+	          	</form>
 	          </li>
 	        </ul>
 
@@ -562,11 +552,13 @@
 	  <!-- Copyright -->
 	  	<div class="footer-copyright text-center py-3 text-light">© <%-new Date().getFullYear()%> <%-infoCompany.name%>
 	  		<span class="separator">-</span> Powered by : 
-	  		<a href="https://www.facebook.com/vanvietquocanh" class="text-light" target="_blank">Van Viet Quoc Anh</a>
+	  		<a href="https://www.facebook.com/vanvietquocanh" class="text-light" target="_blank">Silver Bullet</a>
 	   	</div>
 	  <!-- Copyright -->
 
 	</footer>
+	<script src="./javascripts/goToTop.js"></script>
+	<script src="./javascripts/validCustom.js"></script>
 	<!-- Footer -->
 </body>
 </html>
