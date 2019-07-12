@@ -9,15 +9,12 @@
 	<link rel="stylesheet" href="./stylesheets/libs.css">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.2.0/js/bootstrap.min.js"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/boootstrapotstrap.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/locale/af.js" integrity="sha256-I5ZXO8KcMnqNkrXU7baGig70nATYjNDnxxA2d40PcR8=" crossorigin="anonymous"></script>
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.37/css/bootstrap-datetimepicker.css" crossorigin="anonymous">
 	<link rel="stylesheet" href="./stylesheets/style-loaned.css">
-	<link rel="stylesheet" href="./stylesheets/style.css">
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.14.30/js/bootstrap-datetimepicker.min.js" defer></script>	
+	<link rel="stylesheet" href="./stylesheets/style.css">	
 </head>
 <body>
 	<%-infoCompany.chatbox%>
@@ -50,16 +47,16 @@
 	          Vay theo
 	        </a>
 	        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-	          <a class="dropdown-item" href="/vay+theo+bảo+hiểm+nhân+thọ">Bảo hiểm nhân thọ</a>
-	          <a class="dropdown-item" href="/vay+theo+hộ+khẩu+CMND">Hộ khẩu & CMND</a>
-	          <a class="dropdown-item" href="/vay+theo+hóa+đơn+điện+nước">Hóa đơn điện nước</a>
-	          <a class="dropdown-item" href="/vay+theo+thẻ+tín+dụng">Thẻ tín dụng</a>
-	          <a class="dropdown-item" href="/vay+theo+cavet+xe">Cavet xe</a>
-	          <a class="dropdown-item" href="/vay+theo+giấy+phép+kinh+doanh">Giấy phép kinh doanh</a>
-	          <a class="dropdown-item" href="/vay+theo+hợp+đồng+tín+chấp+củ">Hợp đồng tín chấp củ</a>
+	          <a class="dropdown-item" href="tel:<%-infoCompany.phone%>">Bảo hiểm nhân thọ</a>
+	          <a class="dropdown-item" href="tel:<%-infoCompany.phone%>">Hộ khẩu & CMND</a>
+	          <a class="dropdown-item" href="tel:<%-infoCompany.phone%>">Hóa đơn điện nước</a>
+	          <a class="dropdown-item" href="tel:<%-infoCompany.phone%>">Thẻ tín dụng</a>
+	          <a class="dropdown-item" href="tel:<%-infoCompany.phone%>">Cavet xe</a>
+	          <a class="dropdown-item" href="tel:<%-infoCompany.phone%>">Giấy phép kinh doanh</a>
+	          <a class="dropdown-item" href="tel:<%-infoCompany.phone%>">Hợp đồng tín chấp củ</a>
 	          <div class="dropdown-divider"></div>
-	          <a class="dropdown-item" href="/tín+chấp+qua+lương">Tín chấp qua lương</a>
-	          <a class="dropdown-item" href="/ưu+đãi+dành+cho+giáo+viên+bác+sĩ">Ưu đãi dành cho Giáo viên/Bác sĩ</a>
+	          <a class="dropdown-item" href="tel:<%-infoCompany.phone%>">Tín chấp qua lương</a>
+	          <a class="dropdown-item" href="tel:<%-infoCompany.phone%>">Ưu đãi dành cho Giáo viên/Bác sĩ</a>
 	        </div>
 	      </li>
 	    </ul>
@@ -166,12 +163,12 @@
 								<div class="row">
 									<div class="col-md-7 col-sm-12">
 										<div class="form-group">
-											<input type="text" pattern="[a-zA-Z]{10,50}" class="fullName form-control mb-2 mr-sm-2" name="fullName" id="fullName" required="required" placeholder="Họ và tên">
+											<input type="text" class="fullName form-control mb-2 mr-sm-2" name="fullName" id="fullName" required="required" placeholder="Họ và tên">
 										</div>
 									</div>
 									<div class="col-md-5 col-sm-12">
 										<div class="form-group">
-											<input type="text" pattern="^[\+]+84+([0-9]{9})\b|09+([0-9]{8})\b" class="phoneNumber form-control mb-2 mr-sm-2" name="phoneNumber" required="required" id="phone" placeholder="Số điện thoại">
+											<input type="text" pattern="^[\+]+84+([0-9]{9})|09+([0-9]{8})|07+([0-9]{8})||03+([0-9]{8})|09+([0-9]{8})|05+([0-9]{8})|08+([0-9]{8})" class="phoneNumber form-control mb-2 mr-sm-2" name="phoneNumber" required="required" id="phone" placeholder="Số điện thoại">
 										</div>
 									</div>
 								</div>
@@ -349,12 +346,12 @@
 								<div class="row">
 									<div class="col-md-7 col-sm-12">
 										<div class="form-group has-addon">
-											<input type="text" name="friendName" id="friendName" required="required" placeholder="Họ và tên" class="fullName form-control" pattern="[a-zA-Z]{10,50}" aria-required="true">
+											<input type="text" name="friendName" id="friendName" required="required" placeholder="Họ và tên" class="fullName form-control" pattern='' minlength="10" maxlength="50" aria-required="true">
 										</div>
 									</div>
 									<div class="col-md-5 col-sm-12">
 										<div class="form-group has-addon">
-											<input type="text" name="friendPhone" id="friendPhone" pattern="^[\+]+84+([0-9]{9})\b|09+([0-9]{8})\b" required="required" placeholder="Điện thoại" class="phoneNumber form-control">
+											<input type="text" name="friendPhone" id="friendPhone" pattern="^[\+]+84+([0-9]{9})|09+([0-9]{8})|07+([0-9]{8})||03+([0-9]{8})|09+([0-9]{8})|05+([0-9]{8})|08+([0-9]{8})" required="required" placeholder="Điện thoại" class="phoneNumber form-control">
 										</div>
 									</div>
 								</div>
@@ -436,12 +433,13 @@
 								</div>
 								<div class="form-group">
 									<input type="text" name="friendTime" id="friendTime" placeholder="Thời gian liên lạc tốt nhất" class="form-control" maxlength="50">
-									<div class="input-group input-group-sm" id='datetimepicker'>
+									<!-- <div class="input-group input-group-sm" id='datetimepicker'>
 										<input type="text" class="form-control input-sm" />   
 										<span class="input-group-addon calendar">
 											<span class="glyphicon glyphicon-calendar"></span>
 										</span>
-									</div> <!-- end input group-->
+									</div>  -->
+									<!-- end input group-->
 								</div>
 								<p class="note hidden-md hidden-lg"><sup class="error">*</sup>Thông tin bắt buộc</p>
 							</fieldset>
@@ -492,25 +490,32 @@
 
 	        <ul class="list-unstyled">
 	          <li>
-	            <a class="text-light" href="/vay+theo+bảo+hiểm+nhân+thọ">Bảo hiểm nhân thọ</a>
+	          	<!-- vay+theo+bảo+hiểm+nhân+thọ -->
+	            <a class="text-light" href="tel:<%-infoCompany.phone%>">Bảo hiểm nhân thọ</a>
 	          </li>
 	          <li>
-	            <a class="text-light" href="/vay+theo+hộ+khẩu+CMND">Hộ khẩu & CMND</a>
+	          	<!-- vay+theo+hộ+khẩu+CMND -->
+	            <a class="text-light" href="tel:<%-infoCompany.phone%>">Hộ khẩu & CMND</a>
 	          </li>
 	          <li>
-	            <a class="text-light" href="/vay+theo+hóa+đơn+điện+nước">Hóa đơn điện nước</a>
+	          	<!-- vay+theo+hóa+đơn+điện+nước -->
+	            <a class="text-light" href="tel:<%-infoCompany.phone%>">Hóa đơn điện nước</a>
 	          </li>
 	          <li>
-	            <a class="text-light" href="/vay+theo+thẻ+tín+dụng">Thẻ tín dụng</a>
+	          	<!-- vay+theo+thẻ+tín+dụng -->
+	            <a class="text-light" href="tel:<%-infoCompany.phone%>">Thẻ tín dụng</a>
 	          </li>
 	          <li>
-	            <a class="text-light" href="/vay+theo+cavet+xe">Cavet xe</a>
+	          	<!-- vay+theo+cavet+xe -->
+	            <a class="text-light" href="tel:<%-infoCompany.phone%>">Cavet xe</a>
 	          </li>
 	          <li>
-	            <a class="text-light" href="/vay+theo+giấy+phép+kinh+doanh">Giấy phép kinh doanh</a>
+	          	<!-- vay+theo+giấy+phép+kinh+doanh -->
+	            <a class="text-light" href="tel:<%-infoCompany.phone%>">Giấy phép kinh doanh</a>
 	          </li>
 	          <li>
-	            <a class="text-light" href="/vay+theo+hợp+đồng+tín+chấp+củ">Hợp đồng tín chấp củ</a>
+	          	<!-- vay+theo+hợp+đồng+tín+chấp+củ -->
+	            <a class="text-light" href="tel:<%-infoCompany.phone%>">Hợp đồng tín chấp cũ</a>
 	          </li>
 	        </ul>
 
@@ -525,10 +530,10 @@
 
 	        <ul class="list-unstyled">
 	          <li class="pt-3">
-	            <a class="text-light" href="/tín+chấp+qua+lương">Tín chấp qua lương</a>
+	            <a class="text-light" href="tel:<%-infoCompany.phone%>">Tín chấp qua lương</a>
 	          </li>
 	          <li class="pt-3">
-	            <a class="text-light" href="/ưu+đãi+dành+cho+giáo+viên+bác+sĩ">Ưu đãi dành cho Giáo viên/Bác sĩ</a>
+	            <a class="text-light" href="tel:<%-infoCompany.phone%>">Ưu đãi dành cho Giáo viên/Bác sĩ</a>
 	          </li>
 	          <li>
 	          	<form action="/mailinfo" method="post" class="pt-4">

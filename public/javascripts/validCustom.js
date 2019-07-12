@@ -28,30 +28,30 @@ jQuery(document).ready(function($) {
     loop(fullName, "Vui lòng nhập đúng định dạng họ & tên!(VD:Nguyễn Văn A)")
     loop(phoneNumber, "Vui lòng nhập đúng định dạng số điện thoại!(VD:0987624123/+84923123827)")
     // jquery
-	$(function () {
-			$('#datetimepicker').datetimepicker({ 
-					allowInputToggle: true,
-					showClose: true, //close the picker
-					format: 'YYYY-MMM-DD HH:mm', //YYYY-MMM-DD LT
-					calendarWeeks: true,
-					inline: false,
-	        sideBySide: true
-			});
-			$('#datetimepicker-sidebyside').datetimepicker({
-					showTodayButton: true,
-					showClose: true, //close the picker
-					showClear: true, //clear selection 
-					format: 'YYYY-MMM-DD HH:mm', //YYYY-MMM-DD LT
-					calendarWeeks: true,
-					inline: true,
-					sideBySide: true
-			});
-			$('#datetimepicker-collapse').datetimepicker({
-					showClose: true, //close the picker
-					format: 'YYYY-MMM-DD HH:mm', //YYYY-MMM-DD LT
-					calendarWeeks: true,
-					inline: true,
-					collapse: true
-			}); 
-	});
+	// $(function () {
+	// 		$('#datetimepicker').datetimepicker({ 
+	// 				allowInputToggle: true,
+	// 				showClose: true, //close the picker
+	// 				format: 'YYYY-MMM-DD HH:mm', //YYYY-MMM-DD LT
+	// 				calendarWeeks: true,
+	// 				inline: false,
+	//         sideBySide: true
+	// 		});
+	// 		$('#datetimepicker-sidebyside').datetimepicker({
+	// 				showTodayButton: true,
+	// 				showClose: true, //close the picker
+	// 				showClear: true, //clear selection 
+	// 				format: 'YYYY-MMM-DD HH:mm', //YYYY-MMM-DD LT
+	// 				calendarWeeks: true,
+	// 				inline: true,
+	// 				sideBySide: true
+	// 		});
+	// 		$('#datetimepicker-collapse').datetimepicker({
+	// 				showClose: true, //close the picker
+	// 				format: 'YYYY-MMM-DD HH:mm', //YYYY-MMM-DD LT
+	// 				calendarWeeks: true,
+	// 				inline: true,
+	// 				collapse: true
+	// 		}); 
+	// });
 });
